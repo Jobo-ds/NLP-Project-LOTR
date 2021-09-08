@@ -1,5 +1,7 @@
 ## Imports
 import pandas as pd
+import plotly.express as px
+import matplotlib
 
 ## Data setup
 data_org = pd.read_csv("lotrscript.csv")
@@ -33,7 +35,11 @@ data["movie"] = pd.factorize(data.movie)[0]
 
 ## Data Analysis
 
-# Comparing amount of lines in each movie:
+# Comparing lines in each movie:
 
+# Count lines
+i = data["movie"].value_counts()
+i.plot(kind="bar")
 
+#fig01 = px.bar(data, x="movie", y="")
 

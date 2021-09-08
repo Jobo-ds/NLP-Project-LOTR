@@ -6,8 +6,4 @@ https://github.com/tianyigu/Lord_of_the_ring_project
 
 # Objectives
 
-- Analysis of data
-- Sentiment Analysis on characters through the movies
-- 
-
-# Results
+NLP testing with Lord of the Rings Movie Scripts

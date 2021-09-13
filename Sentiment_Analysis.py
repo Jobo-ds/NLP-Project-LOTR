@@ -46,13 +46,12 @@ remove_specialchars(data, "Character")
 ## Data Analysis
 
 # Comparing count of lines in each movie:
-#fig01 = px.histogram(data, x="Movie")
-#fig01.show()
+fig01 = px.histogram(data, x="Movie")
+fig01.show()
 
 #Comparing all characters count of lines:
 fig01 = px.histogram(data, x="Character").update_xaxes(categoryorder='total descending')
 fig01.show()
-##
 
 # Slimming dataframe to characters with more than 30 lines:
 mainCharacter_count = data["Character"].value_counts()
@@ -61,5 +60,7 @@ mainCharacter = data[~data['Character'].isin(mainCharacter_count[mainCharacter_c
 fig01 = px.histogram(mainCharacter, x="Character").update_xaxes(categoryorder='total descending')
 fig01.show()
 
-##
+## Text Summarization on Characters
+
+
 
